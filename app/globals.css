@@ -1,0 +1,14 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+@layer base{
+ html{scroll-padding-top:5rem}
+ body{@apply overflow-x-hidden bg-white text-slate-800 antialiased;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+ :focus-visible{outline:2px solid #0f766e;outline-offset:2px}
+ @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+}
+@layer components{
+ .fld{@apply flex min-h-12 items-stretch overflow-hidden rounded-lg border border-slate-300 bg-white focus-within:border-brand focus-within:ring-2 focus-within:ring-brand/25}
+ .fld[data-err]{@apply border-red-600 ring-red-600/20}
+ .fld input,.fld select{@apply min-w-0 flex-1 bg-transparent px-3 py-3 text-base outline-none}
+ .fld>span{@apply flex shrink-0 items-center bg-slate-50 px-3 text-sm font-medium text-slate-600}
+ .h2{@apply mb-3 text-xl font-bold text-slate-900}
+}
